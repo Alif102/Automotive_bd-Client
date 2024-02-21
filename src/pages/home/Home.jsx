@@ -9,7 +9,7 @@ import Subscribe from "../../components/Subscribe";
 const Home = () => {
   let[slideData,setSlideData]=useState([])
  useEffect(()=>{
-  fetch('https://car-com-backend.vercel.app/cars')
+  fetch('https://automotiveserver.vercel.app/cars')
 .then(res => res.json())
 .then(data => setSlideData(data))
  },[])

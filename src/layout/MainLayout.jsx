@@ -2,9 +2,9 @@ import { Outlet, useNavigation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import NavBar from "../components/header/NavBar";
 import { useState } from "react";
-import Footer from "../components/footer";
 import { useContext } from "react";
 import { AuthInfo } from "../context/AuthContext";
+// import Footer from "../components/Footer";
 
 const MainLayout = () => {
   let [dark,setDark]=useState(true)
@@ -19,7 +19,7 @@ if(loading) {
 {navigation.state==='loading'?  <div className=" flex justify-center items-center pt-16"><span className="loading loading-spinner loading-lg"></span></div> : <>
 
 <Outlet></Outlet>
-<Footer></Footer>
+{/* <Footer></Footer> */}
 </>}
 </div>)
 }

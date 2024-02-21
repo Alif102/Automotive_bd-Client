@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Brand from "./brand";
+import CarBrand from "./CarBrand";
 
 const Brands = () => {
     let [allBrand,setAllBrand]=useState([])
     useEffect(()=>{
-     fetch('https://car-com-backend.vercel.app/brands')
+     fetch('https://automotiveserver.vercel.app/brands')
      .then(res=>res.json())
      .then(Data=>{
         setAllBrand(Data)
@@ -16,7 +16,7 @@ const Brands = () => {
               ALL  BRANDS
             </h1>
 <div className=" grid lg:grid-cols-4 gap-5 justify-center p-7">
-{allBrand?allBrand.map(brands=><Brand key={brands._id} brands={brands}></Brand>) : <div className=" flex justify-center items-center pt-16"><span className="loading loading-spinner loading-lg"></span></div> }
+{allBrand?allBrand.map(brands=><CarBrand key={brands._id} brands={brands}></CarBrand>) : <div className=" flex justify-center items-center pt-16"><span className="loading loading-spinner loading-lg"></span></div> }
 </div>
         </section>
     );

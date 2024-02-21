@@ -5,7 +5,7 @@ const AllCars = () => {
     let [allCar,setallCar]=useState([])
   
     useEffect(()=>{
-     fetch('https://car-com-backend.vercel.app/cars')
+     fetch('https://automotiveserver.vercel.app/cars')
      .then(res=>res.json())
      .then(Data=>{
       setallCar(Data)})},[])

@@ -15,7 +15,7 @@ const CartComponents = ({ item, cart, setCart }) => {
             confirmButtonText: "Yes, remove!",
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://car-com-backend.vercel.app/carts/${_id}`, {
+                fetch(`https://automotiveserver.vercel.app/carts/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

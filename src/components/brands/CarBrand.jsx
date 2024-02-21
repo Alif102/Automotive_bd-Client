@@ -1,5 +1,5 @@
- import { Link } from "react-router-dom";
-const Brand = ({brands}) => {
+import { Link } from "react-router-dom";
+const CarBrand = ({brands}) => {
     let {brand,link}=brands;
 let brandName=brand.toLowerCase()
     return (
@@ -18,4 +18,4 @@ let brandName=brand.toLowerCase()
 };
 
 
-export default Brand;
+export default CarBrand;

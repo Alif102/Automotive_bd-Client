@@ -40,7 +40,7 @@ const Routes = createBrowserRouter([
        element:<PrivateRoute><Cart/></PrivateRoute>
       },{
         path:"/cars/:id",
-        loader:({params})=>axios.get(`https://car-com-backend.vercel.app/cars/${params.id}`),
+        loader:({params})=>axios.get(`https://automotiveserver.vercel.app/cars/${params.id}`),
         element:<PrivateRoute><SingleCar></SingleCar></PrivateRoute>
       },{
         path:"/brands",
@@ -53,12 +53,12 @@ const Routes = createBrowserRouter([
       },
       {
         path:'/updatecar/:id',
-        loader:({params})=>axios.get(`https://car-com-backend.vercel.app/cars/${params.id}`),
+        loader:({params})=>axios.get(`https://automotiveserver.vercel.app/cars/${params.id}`),
         element:<PrivateRoute><EditCar></EditCar></PrivateRoute>
       },
       {
         path:"/brand/:brand",
-        loader:({params})=>axios.get(`https://car-com-backend.vercel.app/brand/${params.brand}`),
+        loader:({params})=>axios.get(`https://automotiveserver.vercel.app/brand/${params.brand}`),
         element:<PrivateRoute><BrandCars></BrandCars></PrivateRoute>
       },
 
@@ -66,3 +66,6 @@ const Routes = createBrowserRouter([
   },
 ]);
 export default Routes;
+// https://automotiveserver.vercel.app/   https://car-com-backend.vercel.app
+
+ 

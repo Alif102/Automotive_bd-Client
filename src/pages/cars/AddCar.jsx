@@ -24,9 +24,9 @@ if(!/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?
   return toast.error('please add valid link')
 }
 
-  let car={Image,Name, brandLower, type, price, Rating,details}
+  let car={Image,Name, brandLower, brand, type, price, Rating,details}
 
-  fetch('https://car-com-backend.vercel.app/cars',{
+  fetch('https://automotiveserver.vercel.app/cars',{
     method: 'POST',headers:{
       'content-type': 'application/json'
     },
