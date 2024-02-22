@@ -3,7 +3,14 @@ import Brands from "../../components/brands/Brands";
 import Slider from "../../components/header/Slider";
 import { useEffect, useState } from "react";
 import AllCars from "../../components/AllCars";
-import Subscribe from "../../components/Subscribe";
+import Galance from "../../components/Galance/Galance";
+import Features from "../../components/Features/Features";
+import AboutSection from "../../components/Features/AboutSection";
+import UserActivity from "../../components/Features/UserActivity";
+import Newsletter from "../../components/Features/Newsletter";
+import LetsAdd from "../../components/Features/LetsAdd";
+import Contact from "../../components/Footer/Contact";
+import Footer from "../../components/Footer";
 
 
 const Home = () => {
@@ -23,9 +30,23 @@ if(slideData.length>10){
       <>
      
      <Slider slideData={slideData}></Slider>
+     
+     <UserActivity/>
      <Brands></Brands>
+     
+     
+     
      <AllCars></AllCars>
-     <Subscribe></Subscribe>
+     <LetsAdd/>
+     <AboutSection/>
+     <Galance/>
+     <Features/>
+     
+     <Newsletter/>
+     <Contact/>
+     <Footer/>
+     
+     
       </>
 
     );

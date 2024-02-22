@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../../public/images/logo.png";
+import logo from "/images/logo.png";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import Select from "react-select";

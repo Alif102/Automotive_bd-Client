@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../../../public/images/logo.png';
-import logow from '../../../public/images/logo-w.png';
-import head from '../../../public/images/head.png';
+import logo from '/images/logo.png';
+import logow from '/images/logo-w.png';
+import head from '/images/head.png';
 import { BsFillCartCheckFill } from 'react-icons/bs';
 import { useContext, useEffect, useState } from "react";
 import { AuthInfo } from "../../context/AuthContext";
@@ -36,12 +36,12 @@ const NavBar = ({theme}) => {
           },[setCartItems,email,cartItems])
     return (
         <nav className="sticky inset-0 z-10 block h-max w-full max-w-full rounded-none border border-white/80 px-4 bg-white bg-opacity-80 py-1 text-white backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-2 shadow-lg">
-           <div className="bg-[#381411] w-12 p-1 flex gap-2 rounded-lg  transition-all ease-in-out absolute top-[70%] right-0" onClick={handleDarkMode}>
+           <div className="bg-[#381411] w-12 p-1 flex gap-2 rounded-lg  transition-all ease-in-out absolute top-[40%] right-2" onClick={handleDarkMode}>
           <GiMoonBats></GiMoonBats>
           <FaSun></FaSun>
           <span className={`top-0 w-6 h-full absolute ${dark?'rounded-l-lg rounded-r-xl  left-0 bg-[#000000]':'rounded-r-lg rounded-l-xl right-0 bg-[#185f6b]'}`}></span>
         </div>
-        <div className="flex items-center text-gray-900">
+        <div className="flex items-center md:mr-11 text-gray-900">
           <Link
             to='/'
             className="mr-4 block cursor-pointer py-1.5 font-sans text-base font-medium leading-relaxed text-inherit antialiased"
